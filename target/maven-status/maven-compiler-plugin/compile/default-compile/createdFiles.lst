@@ -1,0 +1,6 @@
+fr/hb/poker/business/Town.class
+fr/hb/poker/business/Player.class
+fr/hb/poker/utils/CardManagement.class
+fr/hb/poker/App.class
+fr/hb/poker/business/Card.class
+fr/hb/poker/business/Color.class
