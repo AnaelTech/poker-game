@@ -67,4 +67,25 @@ public void setPlayers(ArrayList<Player> players) {
 public ArrayList<Player> getPlayers() {
     return players;
   }
+
+public void analyseHand(Player player) {
+    // Si main du joueur égale a  As-Roi-Dame-Valet-10 et qu'ils ont la meme couleur alors il a une quite flush royale
+    
+    // Case si chiffre se suit et de la meme couleur quinte flush
+    
+    // Case si 4 cartes de meme valeur alors il a un carré
+    
+    // Case son 3 cartes de meme valeur alors il a un brelan
+    
+    // Case si 2 cartes de meme valeur alors il a une paire
+    
+    // Case si 2 cartes de meme valeur et 2 autres cartes de meme valeur alors il a un double paire
+    
+    // Case si 5 cartes de meme couleur alors il a une Couleur
+    
+    // Case si 5 cartes se suivent alors il a une Quinte
+    
+    // Case si carte la plus haute alors il a une carte haute
+  }
+
 }
