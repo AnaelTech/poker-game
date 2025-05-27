@@ -11,6 +11,7 @@ private String name;
 private float solde;
 private LocalDate birthdayDay;
 private LocalDateTime dateInscription;
+private Town town;
 private ArrayList<Card> hand = new ArrayList<>();
 private static Long counter = 0L; //Variable de classe le static 
 
@@ -20,12 +21,12 @@ public Player(String name) {
   }
 
 
-public Player(Long id, String name, float solde, LocalDate birthdayDay, LocalDateTime dateInscription) {
-    this.id = id;
-    this.name = name;
+public Player(String name, float solde, LocalDate birthdayDay, LocalDateTime dateInscription, Town town) {
+    this(name);
     this.solde = solde;
     this.birthdayDay = birthdayDay;
     this.dateInscription = dateInscription;
+    this.town = town;
   }
 
 public Long getId(){
@@ -71,4 +72,13 @@ public ArrayList<Card> getHand() {
 public void setHand(ArrayList<Card> hand) {
     this.hand = hand;
   }
+
+public Town getTown() {
+    return town;
+  }
+
+public void setTown(Town town) {
+    this.town = town;
+  }
+
 }
