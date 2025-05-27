@@ -80,5 +80,16 @@ public Town getTown() {
 public void setTown(Town town) {
     this.town = town;
   }
+public String toString() {
+    return "Player{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", solde=" + solde +
+            ", birthdayDay=" + birthdayDay +
+            ", dateInscription=" + dateInscription +
+            ", town=" + town +
+            ", hand=" + hand +
+            '}';
+  }
 
 }

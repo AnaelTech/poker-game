@@ -70,5 +70,15 @@ public void setLatitude(Double latitude){
     this.longitude = longitude;
   }
 
+  public String toString() {
+    return "Town{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", zipCode='" + zipCode + '\'' +
+            ", codeInsee='" + codeInsee + '\'' +
+            ", latitude=" + latitude +
+            ", longitude=" + longitude +
+            '}';
+  }
 
 }
