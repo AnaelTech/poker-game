@@ -1,7 +1,6 @@
 package fr.hb.poker.utils;
 
 import java.util.ArrayList;
-//import java.util.Arrays;
 import java.util.Collections;
 
 import fr.hb.poker.business.Card;
@@ -107,13 +106,5 @@ public Combinaison analyseHand(Player player) {
     // }
     
     return result;
-  }
-
-  // Recuperer la main du joueur
-
-  //Stocker le resultat 
-  
-  //Comparer les combinaisons des joueurs pour determiner le gagnant
-
-
+  } 
 } 

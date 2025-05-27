@@ -45,6 +45,7 @@ public WhatCombinaison(int[] occurrences, int[] colorCount) {
     
      public Combinaison getBestCombinaison() {
     if (isQuinteFlushRoyale()){return Combinaison.QUINTE_FLUSH_ROYALE;}
+    if (isQuinte() && isCouleur()){return Combinaison.QUINTE_FLUSH;}
     if (isCarre()){return Combinaison.CARRE;}
     if (isFull()){return Combinaison.FULL;}
     if (isCouleur()){return Combinaison.COULEUR;}
@@ -98,7 +99,7 @@ public WhatCombinaison(int[] occurrences, int[] colorCount) {
 
   public boolean isQuinte() {
     for (int i = 2; i < occurrences.length - 4; i++) {
-      //Vérification de 5 cartes consécutives
+      //Vérification de 5 cartes consécutives // incremente la carte de 1 pour vérifier si les 5 cartes sont consécutives
       if (occurrences[i] > 0 && occurrences[i + 1] > 0 && occurrences[i + 2] > 0 && occurrences[i + 3] > 0 && occurrences[i + 4] > 0) {
         System.out.println("Quinte found starting with value: " + i);
         return true;

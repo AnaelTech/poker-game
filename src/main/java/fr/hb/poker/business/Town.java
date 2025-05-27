@@ -12,6 +12,9 @@ private Double longitude;
 private static Long counter = 0L; // Variable de classe, le static
 
 
+  // Constructeur avec tous les paramètres
+
+
 public Town(String name, String zipCode, String codeInsee, Double latitude, Double longitude) {
     id = ++counter;
     this.name = name;
