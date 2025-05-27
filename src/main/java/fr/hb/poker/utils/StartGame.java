@@ -43,6 +43,7 @@ public class StartGame {
         for (Player player : players) {
             System.out.println("\n🧍 " + player.getName() + "'s hand:");
             player.getHand().forEach(card -> System.out.println("  - " + card));
+            cardManagement.analyseHand(player);
         }
 
         scanner.close();

@@ -11,12 +11,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        StartGame startGame = new StartGame();
-        startGame.Start();
+         StartGame startGame = new StartGame();
+         startGame.Start();
 
         // Town town = new Town("Paris", "75000", "75101", 48.8566, 2.3522);
         //
         // Player player = new Player("John Doe", 100.0f, LocalDate.of(1990, 1, 1), LocalDateTime.now(), town);
         // System.out.println(player);
+        
+      
     }
 } 

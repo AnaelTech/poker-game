@@ -16,5 +16,4 @@ public Color(String name) {
   public String getName() {
     return name;
   }
-
 }
