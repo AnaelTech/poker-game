@@ -3,13 +3,23 @@ package fr.hb.poker.utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
+
 import fr.hb.poker.business.Town;
 
 public class ReadCSV {
 
+  private List<Town> towns = new ArrayList<>();
+
+  public List<Town> getTowns() {
+      return towns;
+  }
+
+
   public ReadCSV() {
     read();
+     
   }
 
 
@@ -21,24 +31,21 @@ public class ReadCSV {
           String[] parts = ligne.split(",");
          
         if(!parts[5].isEmpty() && !parts[6].isEmpty()) {
-          createTownsFromCSV(parts);
+          Town town = createTownsFromCSV(parts);
+          towns.add(town);
         } 
       }
+      System.out.println("Town created");
         } catch (IOException e) {
             System.out.println("Erreur : " + e.getMessage());
         }
   }
 
-  public void createTownsFromCSV(String[] parts) {
+  public Town createTownsFromCSV(String[] parts) {
         
-    Town town = new Town(parts[1], parts[2], parts[0], 
+    Town town = new Town(parts[4], parts[2], parts[0], 
                          Double.parseDouble(parts[5]), Double.parseDouble(parts[6]));
-
-    System.out.println("Town created: " + town.getName() + 
-                       ", ZipCode: " + town.getZipCode() + 
-                       ", CodeInsee: " + town.getCodeInsee() + 
-                       ", Latitude: " + town.getLatitude() + 
-                       ", Longitude: " + town.getLongitude());
+    return town;
   }
 }
 

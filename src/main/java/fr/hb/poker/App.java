@@ -1,12 +1,10 @@
 package fr.hb.poker;
 
+import java.util.List;
+
+import fr.hb.poker.business.Town;
 import fr.hb.poker.utils.ReadCSV;
-// import java.time.LocalDate;
-// import java.time.LocalDateTime;
-//
-// import fr.hb.poker.business.Player;
-// import fr.hb.poker.business.Town;
-import fr.hb.poker.utils.StartGame;
+import fr.hb.poker.utils.SearchTown;
 
 public class App 
 {
@@ -16,7 +14,11 @@ public class App
         //  startGame.Start();
         // 
         ReadCSV readCSV = new ReadCSV();
+        List<Town> towns = readCSV.getTowns(); // Récupère les villes
 
+        SearchTown searchTown = new SearchTown(towns);
+
+        searchTown.search();
           
         // Town town = new Town("Paris", "75000", "75101", 48.8566, 2.3522);
         //
